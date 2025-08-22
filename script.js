@@ -87,3 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
       profilePicDataUrl = '';
       return;
     }
+
+      const reader = new FileReader();
+    reader.onload = function (e) {
+      profilePicDataUrl = e.target.result;
+      profilePreview.src = profilePicDataUrl;
+      profilePreview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  });

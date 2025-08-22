@@ -96,3 +96,26 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     reader.readAsDataURL(file);
   });
+
+   // Generate CV Preview
+  function generateCV() {
+    const get = id => document.getElementById(id)?.value.trim() || '';
+    const required = ['forenames', 'surname', 'gender', 'dob', 'phone', 'email', 'summary', 'skills'];
+    const missing = required.filter(id => !get(id));
+
+    if (missing.length > 0) {
+      const errorMsg = document.getElementById('errorMsg');
+      errorMsg.style.display = 'block';
+      setTimeout(() => errorMsg.style.display = 'none', 3000);
+      return;
+    }
+
+    if (!isValidEmail(get('email'))) {
+      alert('Invalid email format');
+      return;
+    }
+
+    if (!isValidPhone(get('phone'))) {
+      alert('Invalid phone number');
+      return;
+    }

@@ -167,3 +167,10 @@ body.minimal {
   --primary-color: #333333;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+body.minimal input,
+body.minimal textarea,
+body.minimal select {
+  background: #e0e0e0;
+  color: #222222;
+}

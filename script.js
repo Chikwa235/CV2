@@ -39,3 +39,33 @@ document.addEventListener('DOMContentLoaded', () => {
     container.appendChild(newBlock);
   }
 
+   function addExperience() {
+    let expCount = parseInt(document.getElementById('expCount').value);
+    expCount++;
+    document.getElementById('expCount').value = expCount;
+
+    const container = document.getElementById('experienceContainer');
+    const newBlock = document.createElement('div');
+    newBlock.className = 'input-group';
+    newBlock.id = `expBlock${expCount}`;
+    newBlock.innerHTML = `
+      <label>Job Title</label>
+      <input type="text" id="jobTitle${expCount}" />
+
+      <label>Company Name</label>
+      <input type="text" id="company${expCount}" />
+  <label>Location (City, Country)</label>
+      <input type="text" id="location${expCount}" />
+
+      <label>Start Date</label>
+      <input type="text" id="expStart${expCount}" />
+
+      <label>End Date (or "Present")</label>
+      <input type="text" id="expEnd${expCount}" />
+
+      <label>Key Responsibilities / Achievements</label>
+      <textarea id="responsibilities${expCount}"></textarea>
+    `;
+    container.appendChild(newBlock);
+  }
+

@@ -26,3 +26,13 @@ h1 {
   margin: auto;
   transition: background 0.5s;
 }
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}

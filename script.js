@@ -119,3 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Invalid phone number');
       return;
     }
+
+     const skills = get('skills').split(',').map(s => '- ' + s.trim()).join('\n');
+    const certs = get('certifications_and_Learning') ? get('certifications_and_Learning').split('\n').map(c => '- ' + c.trim()).join('\n') : 'N/A';

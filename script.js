@@ -69,3 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
     container.appendChild(newBlock);
   }
 
+    // Theme switching
+  const themeSelector = document.getElementById('themeSelector');
+  themeSelector.addEventListener('change', e => {
+    document.body.className = e.target.value;
+  });
+

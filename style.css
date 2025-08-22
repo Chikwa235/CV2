@@ -50,3 +50,12 @@ select {
   box-sizing: border-box;
 }
 
+input[type="file"] {
+  background: transparent;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}

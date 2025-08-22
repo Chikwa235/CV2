@@ -385,3 +385,8 @@ Portfolio: ${get('portfolio')}`.trim(),
     doc.text('References available upon request.', 10, y);
     doc.save('My_CV.pdf');
   }
+
+   // Button bindings
+  document.getElementById('generateBtn').addEventListener('click', generateCV);
+  document.getElementById('downloadBtn').addEventListener('click', downloadCV);
+});

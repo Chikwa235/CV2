@@ -98,3 +98,13 @@ textarea {
   display: none;
   margin-top: 1rem;
 }
+
+#output {
+  background: var(--bg-color);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  font-family: monospace;
+  color: var(--text-color);
+}

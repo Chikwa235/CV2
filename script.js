@@ -390,3 +390,10 @@ Portfolio: ${get('portfolio')}`.trim(),
   document.getElementById('generateBtn').addEventListener('click', generateCV);
   document.getElementById('downloadBtn').addEventListener('click', downloadCV);
 });
+
+function applyOnline() {
+     const subject = encodeURIComponent("Job Application");
+    const body = encodeURIComponent("Hello,\n\nPlease find my attached CV.\n\nBest regards,\n[Your Name]");
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&su=${subject}&body=${body}`;
+    window.open(gmailURL, "_blank");
+}

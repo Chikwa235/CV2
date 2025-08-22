@@ -174,3 +174,22 @@ body.minimal select {
   background: #e0e0e0;
   color: #222222;
 }
+
+body.minimal #output {
+  background: #f5f5f5;
+  color: #222222;
+  font-family: 'Courier New', monospace;
+}
+
+body.minimal .btn {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+body.minimal .btn:hover {
+  background: #555555;
+}
+
+body.minimal #profilePreview {
+  border-color: var(--primary-color);
+}

@@ -156,3 +156,81 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+     const cvText = `
+${get('forenames')} ${get('middleName')} ${get('surname')}
+Gender: ${get('gender')}
+Date of Birth: ${get('dob')}
+Marital Status: ${get('marital')}
+No. of Children: ${get('children')}
+Nationality: ${get('nationality')}
+National ID / NRC #: ${get('nrc')}
+TPIN: ${get('tpin')}
+NAPSA SSN: ${get('napsa')}
+Postal Address: ${get('postal')}
+Guardian / Company: ${get('guardian')}
+Town: ${get('postalTown')}
+Residential Address: ${get('residential')}
+Plot No.: ${get('plot')}
+Street: ${get('street')}
+Township: ${get('township')}
+Phone: ${get('phone')}
+Email: ${get('email')}
+Contact No. (Tel): ${get('tel')}
+Location: ${get('location')}
+LinkedIn: ${get('linkedin')}
+GitHub: ${get('github')}
+Portfolio: ${get('portfolio')}
+Position Applied For: ${get('position')}
+Alternate Position of Interest: ${get('altPosition')}
+State of Health: ${get('illnesses')}
+List any illnesses: ${get('illnesses')}
+List any allergies: ${get('allergies')}
+Disabilities (If any): ${get('disabilities')}
+Any other data: ${get('otherData')}
+Special Achievements: ${get('achievements')}
+Special Attributes: ${get('attributes')}
+Languages Spoken: ${get('languages')}
+Hobbies & Pass Time Activities: ${get('hobbies')}
+What is your expected minimum gross pay?: ${get('expectedPay')}
+Other Expectations: ${get('expectations')}
+Do you have a valid driver’s license?: ${get('license')}
+If successful, when would you be ready to start work?: ${get('startDate')}
+Reason for Leaving Last Employment: ${get('reasonLeave')}
+If not working, indicate current occupation: ${get('currentOccupation')}
+Referees (Name, Profession, Address, Contact No.): ${get('referee1')}, ${get('referee2')}, ${get('referee3')}
+==============================
+Professional Summary
+==============================
+${get('summary')}
+
+==============================
+Technical Skills
+==============================
+${skills}
+
+==============================
+Experience
+==============================
+${experience || 'N/A'}
+
+==============================
+Education
+==============================
+${education || 'N/A'}
+
+==============================
+Certifications
+==============================
+${certs}
+
+==============================
+Additional Info
+==============================
+${get('additional')}
+
+${profilePicDataUrl ? '[Profile Picture included below]' : ''}
+
+References available upon request.`;
+
+    document.getElementById('output').textContent = cvText;
+  }

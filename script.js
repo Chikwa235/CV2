@@ -353,3 +353,35 @@ Portfolio: ${get('portfolio')}`.trim(),
       'Certifications': get('certifications_and_Learning') || 'N/A',
       'Additional Info': get('additional')
     };
+
+       Object.entries(sections).forEach(([title, content]) => {
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(14);
+  if (title === 'Position Applied For') {
+    doc.setFont('helvetica', 'bold'); // Make it not bold
+  } else {
+    doc.setFont('helvetica', 'bold'); // Bold for all other sections
+  }
+  doc.setFontSize(14);
+  doc.text(title, 10, y);
+   y += 8;
+
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(11);
+      const lines = doc.splitTextToSize(content, 180);
+      lines.forEach(line => {
+        if (y > 270) {
+          doc.addPage();
+          y = 15;
+        }
+        doc.text(line, 10, y);
+        y += 6;
+      });
+      y += 5;
+    });
+
+    doc.setFont('helvetica', 'italic');
+    doc.setFontSize(10);
+    doc.text('References available upon request.', 10, y);
+    doc.save('My_CV.pdf');
+  }

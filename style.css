@@ -91,3 +91,10 @@ textarea {
 .btn:hover {
   background: #059669;
 }
+
+#errorMsg {
+  color: red;
+  font-weight: bold;
+  display: none;
+  margin-top: 1rem;
+}

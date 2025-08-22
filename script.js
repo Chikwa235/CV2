@@ -75,3 +75,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.className = e.target.value;
   });
 
+   // Profile Picture Preview
+  const profilePicInput = document.getElementById('profilePic');
+  const profilePreview = document.getElementById('profilePreview');
+  let profilePicDataUrl = '';
+
+  profilePicInput.addEventListener('change', function (e) {
+    const file = e.target.files[0];
+    if (!file) {
+      profilePreview.style.display = 'none';
+      profilePicDataUrl = '';
+      return;
+    }

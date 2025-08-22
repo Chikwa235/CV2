@@ -246,3 +246,18 @@ References available upon request.`;
       setTimeout(() => errorMsg.style.display = 'none', 3000);
       return;
     }
+
+        const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const get = id => document.getElementById(id).value.trim();
+    let y = 15;
+ if (profilePicDataUrl) {
+      try {
+        const props = doc.getImageProperties(profilePicDataUrl);
+        const width = 40;
+        const height = (props.height * width) / props.width;
+        doc.addImage(profilePicDataUrl, 'JPEG', doc.internal.pageSize.getWidth() - 10 - width, y, width, height);
+      } catch (e) {
+        console.warn('Image not added:', e);
+      }
+    }

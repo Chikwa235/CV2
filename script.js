@@ -139,3 +139,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
+    
+// Build dynamic experience section
+    let experience = '';
+    const expCount = parseInt(document.getElementById('expCount').value);
+    for (let i = 1; i <= expCount; i++) {
+      const title = get(`jobTitle${i}`);
+      const company = get(`company${i}`);
+      const location = get(`location${i}`);
+      const startDate = get(`expStart${i}`);
+      const endDate = get(`expEnd${i}`);
+      const description = get(`responsibilities${i}`);
+
+      if (title || company || location || startDate || endDate || description) {
+        experience += `${title || 'Job Title'} at ${company || 'Company'} in ${location || 'Location'} (${startDate || 'Start'} - ${endDate || 'End'})\n${description || 'Job Description'}\n\n`;
+      }
+    }
+

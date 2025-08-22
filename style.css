@@ -59,3 +59,8 @@ textarea {
   resize: vertical;
   min-height: 80px;
 }
+
+#themeSelector {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}

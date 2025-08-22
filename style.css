@@ -133,3 +133,10 @@ body.elegant {
   --primary-color: #b56969;
   font-family: 'Georgia', serif;
 }
+
+body.elegant input,
+body.elegant textarea,
+body.elegant select {
+  background: #f3e8e8;
+  color: #4a3c31;
+}

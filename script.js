@@ -122,3 +122,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
      const skills = get('skills').split(',').map(s => '- ' + s.trim()).join('\n');
     const certs = get('certifications_and_Learning') ? get('certifications_and_Learning').split('\n').map(c => '- ' + c.trim()).join('\n') : 'N/A';
+
+       // Build dynamic education section
+    let education = '';
+    const eduCount = parseInt(document.getElementById('eduCount').value);
+     for (let i = 1; i <= eduCount; i++) {
+      const institution = get(`institution${i}`);
+      const degree = get(`degree${i}`);
+      const field = get(`field${i}`);
+      const yearStart = get(`yearStart${i}`);
+      const yearEnd = get(`yearEnd${i}`);
+      const grade = get(`grade${i}`);
+
+      if (institution || degree || field || yearStart || yearEnd || grade) {
+        education += `${degree || 'Degree/Diploma'}${field ? ', ' + field : ''} from ${institution || 'Institution'} (${yearStart || 'Start'} - ${yearEnd || 'End'})${grade ? ', Grade/GPA: ' + grade : ''}\n`;
+      }
+    }
+  

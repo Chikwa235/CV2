@@ -108,3 +108,12 @@ textarea {
   font-family: monospace;
   color: var(--text-color);
 }
+
+#styledPreview.hidden-preview {
+  margin-top: 2rem;
+  background: #fff;
+  color: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  display: none;
+}

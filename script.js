@@ -234,3 +234,15 @@ References available upon request.`;
 
     document.getElementById('output').textContent = cvText;
   }
+
+   // Download PDF
+  async function downloadCV() {
+    const required = ['forenames', 'surname', 'gender', 'dob', 'phone', 'email', 'summary', 'skills'];
+    const missing = required.filter(id => !document.getElementById(id).value.trim());
+
+    if (missing.length > 0) {
+      const errorMsg = document.getElementById('errorMsg');
+      errorMsg.style.display = 'block';
+      setTimeout(() => errorMsg.style.display = 'none', 3000);
+      return;
+    }

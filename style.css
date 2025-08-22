@@ -231,3 +231,13 @@ body.minimal #profilePreview {
 #applyBtn:hover {
   background: #059669;
 }
+
+h2, h3, p {
+  text-align: center;
+}
+
+
+.warning-text {
+  color: red;
+  font-weight: bold;
+}

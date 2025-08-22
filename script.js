@@ -261,3 +261,25 @@ References available upon request.`;
         console.warn('Image not added:', e);
       }
     }
+
+       // Build education section manually from dynamic blocks
+    let education = '';
+    const eduCount = parseInt(document.getElementById('eduCount').value);
+    for (let i = 1; i <= eduCount; i++) {
+      const institution = get(`institution${i}`);
+      const degree = get(`degree${i}`);
+      const field = get(`field${i}`);
+      const yearStart = get(`yearStart${i}`);
+      const yearEnd = get(`yearEnd${i}`);
+      const grade = get(`grade${i}`);
+
+      if (institution || degree || field || yearStart || yearEnd || grade) {
+        education += 
+  `Institution: ${institution || 'N/A'}\n` +
+          `Degree/Diploma: ${degree || 'N/A'}\n` +
+          `Field of Study: ${field || 'N/A'}\n` +
+          `Year Started: ${yearStart || 'N/A'}\n` +
+          `Year Completed: ${yearEnd || 'N/A'}\n` +
+          `Grade/GPA: ${grade || 'N/A'}\n\n`;
+      }
+    }

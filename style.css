@@ -36,3 +36,17 @@ label {
   margin-bottom: 0.3rem;
   font-weight: bold;
 }
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  background: #334155;
+  color: var(--text-color);
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+

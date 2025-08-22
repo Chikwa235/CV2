@@ -140,3 +140,22 @@ body.elegant select {
   background: #f3e8e8;
   color: #4a3c31;
 }
+
+body.elegant #output {
+  background: #fff8f0;
+  color: #4a3c31;
+  font-family: 'Georgia', serif;
+}
+
+body.elegant .btn {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+body.elegant .btn:hover {
+  background: #925252;
+}
+
+body.elegant #profilePreview {
+  border-color: var(--primary-color);
+}
